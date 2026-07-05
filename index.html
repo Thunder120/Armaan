@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMAAN | Fortnite Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .apple-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .blue-glow {
+            box-shadow: 0 0 50px -10px rgba(10, 132, 255, 0.4);
+        }
+        .text-glow {
+            text-shadow: 0 0 30px rgba(10, 132, 255, 0.6);
+        }
+        /* Custom Cursor - Hidden on mobile */
+        #cursor {
+            width: 20px; height: 20px;
+            background: #0A84FF;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: screen;
+            box-shadow: 0 0 20px #0A84FF;
+            display: none;
+        }
+        @media (min-width: 1024px) { #cursor { display: block; } body { cursor: none; } }
+        
+        /* Smooth Entrance Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <div id="cursor"></div>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex flex-col items-center justify-center text-center px-6">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="z-10">
+            <h1 class="text-[16vw] md:text-[10vw] font-black tracking-tighter leading-none mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-600">
+                ARMAAN
+            </h1>
+            <p class="text-blue-500 text-sm md:text-xl font-light tracking-[0.4em] uppercase mb-12">
+                Fortnite Pro • Coach • King
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button class="px-10 py-4 bg-blue-600 rounded-full font-bold blue-glow hover:bg-blue-500 transition-all">Train With Me</button>
+                <button class="px-10 py-4 apple-blur rounded-full font-bold hover:bg-white/10 transition-all">View Highlights</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-black border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="reveal text-center">
+                <div class="text-4xl md:text-6xl font-black mb-1">5000+</div>
+                <div class="text-blue-500 text-xs font-bold uppercase tracking-widest">Hours Played</div>
+            </div>
+            <div class="reveal text-center">
+                <div class="text-4xl md:text-6xl font-black mb-1">1000+</div>
+                <div class="text-blue-500 text-xs font-bold uppercase tracking-widest">Students</div>
+            </div>
+            <div class="reveal text-center">
+                <div class="text-4xl md:text-6xl font-black mb-1">Elite</div>
+                <div class="text-blue-500 text-xs font-bold uppercase tracking-widest">Mechanics</div>
+            </div>
+            <div class="reveal text-center">
+                <div class="text-4xl md:text-6xl font-black mb-1">Unreal</div>
+                <div class="text-blue-500 text-xs font-bold uppercase tracking-widest">Rank</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Ego Section -->
+    <section class="py-40 bg-[#070707]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-zinc-500 uppercase tracking-[0.5em] text-sm font-bold mb-10">Confidence Level</h2>
+            <div class="h-[2px] w-full bg-zinc-900 rounded-full mb-10 overflow-hidden">
+                <div id="ego-bar" class="h-full bg-blue-500 w-0 transition-all duration-[2000ms] ease-out shadow-[0_0_20px_#0A84FF]"></div>
+            </div>
+            <div class="text-[20vw] md:text-[15vw] font-black italic text-blue-500 leading-none text-glow mb-10">999%</div>
+            <p class="text-xl text-zinc-500 italic">"I don’t lose. Height belongs to me."</p>
+        </div>
+    </section>
+
+    <!-- Coaching Section -->
+    <section class="py-32 max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl md:text-6xl font-black mb-16 tracking-tighter">Coaching</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="reveal apple-blur p-10 rounded-[30px] border border-white/10">
+                <h3 class="text-2xl font-bold mb-4">Mechanics</h3>
+                <p class="text-zinc-500 mb-8 text-sm">Master piece control and retakes.</p>
+                <div class="text-3xl font-black text-blue-500">$Elite</div>
+            </div>
+            <div class="reveal apple-blur p-10 rounded-[30px] border border-blue-500/30">
+                <h3 class="text-2xl font-bold mb-4">Game Sense</h3>
+                <p class="text-zinc-500 mb-8 text-sm">Smart rotations & VOD reviews.</p>
+                <div class="text-3xl font-black text-blue-500">$Pro</div>
+            </div>
+            <div class="reveal apple-blur p-10 rounded-[30px] border border-white/10">
+                <h3 class="text-2xl font-bold mb-4">Rank Push</h3>
+                <p class="text-zinc-500 mb-8 text-sm">Guaranteed path to Unreal rank.</p>
+                <div class="text-3xl font-black text-blue-500">$Custom</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 text-center border-t border-white/5">
+        <div class="flex justify-center gap-8 mb-8 text-zinc-500">
+            <i data-lucide="instagram" class="hover:text-blue-500 cursor-pointer"></i>
+            <i data-lucide="twitter" class="hover:text-blue-500 cursor-pointer"></i>
+            <i data-lucide="youtube" class="hover:text-blue-500 cursor-pointer"></i>
+        </div>
+        <p class="text-zinc-700 text-xs uppercase tracking-widest">© 2024 ARMAAN. The lobby belongs to me.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Scroll Reveal Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Trigger Ego Bar when it comes into view
+                    if(entry.target.id === 'ego-bar') entry.target.style.width = '100%';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal, #ego-bar').forEach(el => observer.observe(el));
+
+        // Easter Egg
+        let keys = '';
+        window.addEventListener('keydown', (e) => {
+            keys += e.key;
+            if (keys.includes('1v1')) {
+                alert("Armaan accepts your challenge.");
+                keys = '';
+            }
+        });
+    </script>
+</body>
+</html>
